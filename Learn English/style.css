@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+
+	font-family: 'Nunito', sans-serif;
+ }
+
+ * {
+ 	margin: 0px;
+ 	padding: 0px;
+ 	list-style: none;
+ 	text-decoration: none;
+
+ }
+
+ .sidebar {
+ 	position: fixed;
+ 	left: -250px;
+ 	width: 250px;
+ 	height: 100%;
+ 	background: #151719;
+ 	transition: all .5s ease;
+ }
+
+ .sidebar header {
+ 	font-size: 22px;
+ 	color: white;
+ 	text-align: center;
+ 	line-height: 70px;
+ 	background: #151719;
+ 	user-select: none;
+ }
+
+ .sidebar .english {
+ 	color: #00FA9A;
+ }
+
+ .content .home .english {
+ 	color: red;
+ }
+
+ .content .home .english:after {
+ 	content: '';
+ 	animation: changetext 5s infinite linear;
+ 	font-size: 3.5rem;
+ }
+
+ @keyframes changetext {
+ 	0% { content: "English"; }
+ 	25% { content: "अंग्रेज़ी"; }
+ 	50% { content: "ইংরেজি"; }
+ 	75% { content: "inglesa"; }
+ 	100% { content: "انگریزی "}
+
+ }
+
+ .sidebar ul li a {
+ 	display: block;
+ 	height: 100%;
+ 	width: 100%;
+ 	line-height: 65px;
+ 	font-size: 23px;
+ 	padding-left: 40px;
+ 	color: white;
+ 	box-sizing: border-box;
+ 	border-bottom: 1px solid rgba(255,255,255,0.3);
+ 	transition: .4s;
+ 	border-left: 3px solid transparent;
+ }
+
+ .sidebar ul li:hover a{
+ 	padding-left: 50px;
+ 	color: #00FA9A;
+ 	border-left-color: #00FA9A;
+ }
+
+ .sidebar ul a i{
+ 	margin-right: 16px;
+ }
+
+ #check{
+ 	display: none;
+ }
+
+ label #btn, label #cancel {
+ 	position: absolute;
+ 	cursor: pointer;
+ 	background-color: #151719;
+ 	border-radius: 3px;
+ }
+
+ label #btn{
+ 	left: 40px;
+ 	top: 25px;
+ 	font-size: 35px;
+ 	color: black;
+ 	background: white;
+ 	padding: 6px 12px;
+ 	transition: all .5s;
+ }
+
+ label #cancel {
+ 	z-index: 1111;
+ 	left: -195px;
+ 	top: 17px;
+ 	font-size: 30px;
+ 	color: white;
+ 	padding: 4px 9px;
+ 	transition: all .5s;
+ 	position: fixed;
+ }
+
+ #check:checked ~ .sidebar{
+ 	left: 0px;
+ }
+
+ #check:checked ~ label #btn{
+ 	left: 250px;
+ 	opacity: 0;
+ 	pointer-events: none;
+ }
+
+ #check:checked ~ label #cancel{
+ 	left: 195px;
+ }
+
+ #check:checked ~ section {
+ 	margin-left: 250px;
+ }
+
+section {
+	background: white no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: all .5s;
+}
+
+.back {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	align-items: center;
+	display: inline-block;
+	justify-content: center;
+	display: flex;
+	/*min-height: 100vh;*/
+}
+
+.back a {
+	color: white;
+}
+
+button {
+	padding: 12px;
+	font-size: 15px;
+	border-radius: 7px;
+	cursor: pointer;
+	margin: 10px;
+	color: white;
+	font-size: 20px;
+	background: black;
+	border: 2px solid black;
+}
+
+
+.container{
+  width: 100%;
+  height: 900px;
+  padding: 50px 0;
+  background: #ffffff;
+  max-height: 100px;
+}
+
+.content{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.content p{
+  font-size: 18px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content .heading{
+	font-size: 40px;
+	text-align: left;
+	font-weight: 800;
+}
+
+.content .sub-heading{
+	margin-top: 20px;
+	font-size: 30px;
+	text-align: left;
+	font-weight: 800;
+}
+
+.content ul {
+	font-size: 18px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 100px; /* Place the button at the bottom of the page */
+  right: 27px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(0,0,0,0.5); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 22px; /* Increase font size */
+}
+
+
+/*.table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+.table td, .table th {
+	font-size: 17px;
+	padding: 7px;
+	border: transparent;
+}
+
+.table th {
+	background-color: #A9A9A9;
+	color: #000000;
+	text-align: left;
+}
+*/
+
+/*@media(max-width: 767px) {
+	.table {
+		width: 75px;
+	}
+
+}*/
+
+.content .box {
+	margin-top: 20px;
+	background-color: #f1f2fa;
+	color: #3b3e4d;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.content .box p {
+	padding: 10px;
+	font-size: 17px;
+}
+
+.content .box p b {
+	color: #12ab87;
+}
+
+.content .correct {
+	color: #12ab87;
+	font-weight: 800;
+}
+
+.content .incorrect {
+	color: red;
+	font-weight: 800;
+}
+
+.content .home {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.content .home h1{
+	font-size: 50px;
+	text-align: center;
+}
+
+.content .home p {
+	font-size: 30px;
+	text-align: center;
+}
+
+.sidebar .sp {
+	color: #00FA9A;
+}
+
+.home .book {
+	color: black;
+}
+
+.quiz {
+	width: 100%;
+	height: 100px;
+	border: transparent;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.quiz-text {
+	font-size: 20px;
+	padding-top: 25px;
+}
+
+.left {
+	color: red;
+}
+
+.card1 {
+  /* Add shadows to create the "card" effect */
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin-top: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card1 .card-container a {
+	color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+
+.card2 {
+  /* Add shadows to create the "card" effect */
+  width: 200px;
+  float: left;
+  margin-top: 60px;
+  float: left;
+  margin-left: 24px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card2 .card-container a {
+	color: white;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+
+
+.card3 {
+  /* Add shadows to create the "card" effect */
+  width: 200px;
+  float: right;
+  margin-top: 60px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card3 .card-container a {
+	color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+
+.card4 {
+  /* Add shadows to create the "card" effect */
+  width: 200px;
+  float: left;
+  height: 100px;
+  margin-top: 75px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card4 .card-container a {
+	color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card4:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+
+.card5 {
+  /* Add shadows to create the "card" effect */
+  width: 200px;
+  float: left;
+  margin-top: 75px;
+  float: left;
+  margin-left: 14px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card5 .card-container a {
+	color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card5:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+
+
+.card6 {
+  /* Add shadows to create the "card" effect */
+  width: 220px;
+  float: right;
+  margin-top: 75px;
+  height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.card6 .card-container a {
+	color: white;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card6:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  cursor: pointer;
+}
+/* Add some padding inside the card container */
+.card-container {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-container p {
+	font-size: 20px;
+}
+
+
+
+@media(max-width: 780px)
+{
+	.container {
+		width: 650px;
+		padding: 60px 0;
+		max-height: 100px;
+	}
+	.content {
+		width: 450px;
+	}
+	.content p {
+		font-size: 15px;
+	}
+
+	label #btn {
+	 	left: 25px;
+	 	top: 20px;
+	 	font-size: 28px;
+	 	color: black;
+	 	background: white;
+	 	padding: 6px 12px;
+	 	transition: all .5s;
+ }
+}
+
+@media(max-width: 540px)
+{
+	.container {
+		width: 470px;
+		padding: 40px 0;
+		max-height: 100px;
+	}
+	.content{ 
+		margin-top: 25px;
+		width: 330px;
+	}
+
+	label #btn {
+	 	left: 20px;
+	 	top: 15px;
+	 	font-size: 22px;
+	 	color: black;
+	 	background: white;
+	 	padding: 6px 12px;
+	 	transition: all .5s;
+ }
+	.content p {
+		font-size: 15px;
+	}
+
+	.content .heading {
+		font-size: 32px;
+	}
+
+	.content .sub-heading {
+		font-size: 22px;
+	}
+	.content ul {
+		font-size: 15px;
+	}
+
+	.content .box p {
+		font-size: 15px;
+	}
+
+	.content .home h1 {
+		font-size: 23px;
+	}
+
+	.content .home p {
+		font-size: 15px;
+	}
+	button {
+		font-size: 20px;
+		padding: 12px;
+	}
+}
+
+
+@media only screen and (max-device-width: 480px)
+{
+	.container {
+		max-width: 100%;
+		height: auto;
+		padding: 20px 0;
+	}
+
+	.content{ 
+		margin-top: 10px;
+		width: 80%;
+	}
+
+	label #btn {
+	 	left: 25px;
+	 	top: 25px;
+	 	font-size: 30px;
+	 	color: black;
+	 	background: white;
+	 	padding: 4px 1px;
+	 	transition: all .5s;
+ }
+	.content p {
+		font-size: 26px;
+	}
+
+	.content .heading {
+		font-size: 50px;
+		padding: 10px 0;
+	}
+
+	.content .sub-heading {
+		font-size: 35px;
+	}
+	.content ul {
+		font-size: 26px;
+	}
+	.sidebar ul li a {
+		line-height: 100px;
+		margin-top: 50px;
+		/*padding-left: 20px;*/
+		border-bottom: 1px solid rgba(255,255,255,0.9);
+	}
+
+	.sidebar header {
+		font-size: 26px;
+		padding-right: 20px;
+		margin-top: 20px;
+	}
+
+	.sidebar ul li a {
+		font-size: 22px;
+	}
+
+	label #cancel {
+		top: 38px;
+	}
+
+	.content .box p {
+		font-size: 28px;
+	}
+
+	.content .home h1 {
+		font-size: 50px;
+	}
+
+	button {
+		font-size: 24px;
+		padding: 15px;
+	}
+
+	.quiz .quiz-text {
+		margin-top: 120px;
+		font-size: 22px;
+	}
+
+	.card1 {
+  width: 200px;
+  float: left;
+  height: 110px;
+  margin-top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+
+	.card2 {
+  width: 200px;
+  float: left;
+  margin-left: 66px;
+  height: 110px;
+  margin-top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+
+	.card3 {
+  width: 200px;
+  float: right;
+  height: 110px;
+  margin-top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+
+	.card4 {
+  width: 200px;
+  float: left;
+  height: 110px;
+  margin-top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+
+	.card5 {
+  width: 200px;
+  float: left;
+  height: 110px;
+  margin-top: 200px;
+  margin-left: 54px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+
+	.card6 {
+  width: 220px;
+  float: right;
+  height: 110px;
+  margin-top: 200px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,2.5);
+  transition: 0.3s;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	}
+}
+
+
+
+
